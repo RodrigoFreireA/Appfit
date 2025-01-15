@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Providers;
-use Illuminate\Support\Facades\Gate;
+
 use App\Models\User;
+use Illuminate\Support\Facades\Gate;
 use App\Policies\RolePolicy;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
-class AppServiceProvider extends ServiceProvider
+class AuthServiceProvider extends ServiceProvider
 {
     /**
      * The policy mappings for the application.

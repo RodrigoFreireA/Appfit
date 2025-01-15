@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -22,4 +23,5 @@ class Aluno extends Model
     {
         return $this->hasMany(Treino::class);
     }
+
 }

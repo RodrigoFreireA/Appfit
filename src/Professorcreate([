@@ -1,0 +1,21 @@
+[90m= [39m[34;4mIlluminate\Support\Collection[39;24m {#5231
+    [34mall[39m: [
+      {#5227
+        +"[1mid[22m": [35m1[39m,
+        +"[1mnome[22m": "[32mprofessor teste[39m",
+        +"[1memail[22m": "[32mprofessor@professor.com[39m",
+        +"[1msenha[22m": "[32m$2y$12$XzMkGQTd9CcIl98EIet2sux4bEzIZXhm2zKUETVY.AAOLg54c0S02[39m",
+        +"[1mcreated_at[22m": "[32m2025-01-14 18:56:16[39m",
+        +"[1mupdated_at[22m": "[32m2025-01-14 18:56:16[39m",
+      },
+      {#5226
+        +"[1mid[22m": [35m2[39m,
+        +"[1mnome[22m": "[32mNovo Professor[39m",
+        +"[1memail[22m": "[32mprofessor@professor2.com[39m",
+        +"[1msenha[22m": "[32m$2y$12$tlineCnnkGP4xd6JFp/iaONW0ZDdedfjPpLnaordZK52pIjGa2r1K[39m",
+        +"[1mcreated_at[22m": "[32m2025-01-15 14:54:21[39m",
+        +"[1mupdated_at[22m": "[32m2025-01-15 14:54:21[39m",
+      },
+    ],
+  }
+

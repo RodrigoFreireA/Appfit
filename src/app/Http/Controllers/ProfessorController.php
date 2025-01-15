@@ -8,21 +8,28 @@ use Illuminate\Http\Request;
 class ProfessorController extends Controller
 {
     // Lista todos os professores
-    public function index() {
+    public function index()
+    {
+        // Carregar os professores do banco de dados
         $professores = Professor::all();
+
+        // Retornar para a view com os professores
         return view('professores.index', compact('professores'));
     }
 
+
     // Exibe o formulário para criar um professor
-    public function create() {
+    public function create()
+    {
         return view('professores.create');
     }
 
     // Salva um novo professor no banco de dados
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         $validated = $request->validate([
             'nome' => 'required|string|max:255',
-            'email' => 'required|email|unique:professores',
+            'email' => 'required|email|unique:professores,email',
             'senha' => 'required|min:6',
         ]);
 
@@ -30,15 +37,17 @@ class ProfessorController extends Controller
             'nome' => $validated['nome'],
             'email' => $validated['email'],
             'senha' => bcrypt($validated['senha']),
+            'role' => 'professor', // Define o papel como 'professor'
         ]);
 
-        return redirect()->route('professores.index')->with('success', 'Professor cadastrado com sucesso!');
+        return redirect()->route('professores.index')->with('success', 'Professor criado com sucesso!');
     }
-    
+
+
     //exibe a listagem de alunos
-    public function alunos($id) {
+    public function alunos($id)
+    {
         $professor = Professor::with('alunos')->findOrFail($id);
         return view('professores.alunos', compact('professor'));
     }
-    
 }

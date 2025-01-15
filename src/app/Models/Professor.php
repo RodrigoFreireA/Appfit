@@ -10,7 +10,8 @@ class Professor extends Model
     use HasFactory;
 
     // Permitir preenchimento em massa para os campos abaixo
-    protected $fillable = ['nome', 'email', 'senha'];
+    protected $fillable = ['nome', 'email', 'senha', 'role'];
+
     protected $table = 'professores';
 
     // Relação: Um Professor tem muitos Alunos
